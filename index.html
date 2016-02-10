@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Villan To-Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <div class="header">
+        <div class="col-xs-10"><h3>To Do List</h3></div>
+        <div class="col-xs-2">
+            <h3>
+                <i class="icon fa fa-plus-square-o"></i>
+            </h3>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!--Container -->
+    <div class="container">
+
+        <!-- To Do List -->
+        <div class="main col-xs-6">
+            <h3>My Goals: </h3>
+            <ul id="list">
+
+            </ul>
+        </div>
+        <!-- To Do List End -->
+
+        <!-- Add Task Menu -->
+        <div class="aside newTask">
+            <div><h3>New Task</h3></div>
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="newTask" placeholder="Enter New Task">
+                </div>
+                <div class="col-sm-2">
+                    <div class="btn btn-primary" onclick="addItem()">Add Task</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aside editTask">
+            <div><h3>Edit Task</h3></div>
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="editTask" placeholder="Enter New Task">
+                </div>
+                <div class="col-sm-2">
+                    <div class="btn btn-primary" onclick="addItem()">Change</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Task Menu End -->
+
+    </div>
+    <!-- Container End -->
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
