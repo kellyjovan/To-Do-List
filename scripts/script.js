@@ -24,9 +24,35 @@ function editTaskBtn()
     {
         e || window.event;
         var target = e.target || e.srcElement;
-        var editTask = document.getElementById("editTask").value;
-        target.parentNode.children[0].innerHTML = editTask;
+        //var editTask = document.getElementById("editTask").value;
+        //target.parentNode.children[0].innerHTML = editTask;
+        var input = target.parentNode.getElementsByTagName("input")[0];
+        if(input.disabled)
+        {
+            input.removeAttribute("disabled");
+
+        }
+        else {
+            input.setAttribute("disabled", true);
+        }
     });
+}
+
+function editBtn(e)
+{
+    console.log(e);
+    if(e.keyCode == 13)
+    {
+        // if(input.disabled)
+        // {
+        //     input.removeAttribute("disabled");
+        //
+        // }
+        // else
+        // {
+        //     input.setAttribute("disabled", true);
+        // }
+    }
 }
 
 function addItem()
@@ -41,7 +67,7 @@ function addItem()
 
       var li = document.createElement("li");
       //li.appendChild(document.createTextNode(newTask));
-      li.innerHTML = '<p class="task">' + newTask + '</p><i class="icon trash fa fa-trash"></i><i class="icon edit fa fa-pencil"></i>';
+      li.innerHTML = '<input class="task" disabled="true" onkeypress="editBtn(event)" value="' + newTask +'"><i class="icon trash fa fa-trash"></i><i class="icon edit fa fa-pencil"></i>';
     //   li.innerHTML = '<input class="taskInput" type="text" disabled="disabled" value="' + newTask + '>';
       ul.appendChild(li);
       editTaskBtn();
@@ -49,6 +75,14 @@ function addItem()
       numOfLi++;
       document.getElementById('newTask').value = "";
   }
+}
+
+function addItemEnter(e)
+{
+    if(e.keyCode == 13)
+    {
+        addItem();
+    }
 }
 
 function displayNoTasks()

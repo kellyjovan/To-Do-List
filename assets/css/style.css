@@ -11,6 +11,16 @@ body{
     font-size: 20px;
 }
 
+input{
+
+}
+
+input[disabled]
+{
+    background: none;
+    border: none;
+}
+
 .icon{
     float: right;
 }
@@ -40,10 +50,6 @@ li:hover .trash, li:hover .edit{
 
 .newTask{
     top: 70px;
-}
-
-.editTask{
-    top: 250px;
 }
 
 .main, .aside{
